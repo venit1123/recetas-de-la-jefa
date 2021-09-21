@@ -24,9 +24,8 @@ class Navbar extends Component{
                 <h1 className="navbar-logo">Recetas de la Jefa
                     {/* <i className="fas fa-home"></i> TODO: Delete if icon will not be used*/} 
                 </h1>
-                <div className="menu-icon" onClick={this.handleClick}>
-                    {/* <i className={this.state.clicked ? "fas fa-times" : "fas fa-bars"}></i> */}
-                    <i >{this.state.clicked ? "Close" : "..."}</i>
+                <div onClick={this.handleClick}>
+                    <i className={this.state.clicked ? "menu-icon close-button" : "menu-icon "}>{this.state.clicked ? "Close" : "..."}</i>
                 </div>
                 
                 <ul className={this.state.clicked ? 'nav-menu active' : 'nav-menu'}>
