@@ -5,7 +5,7 @@ import Card from './Card/Card'
 class HomeView extends Component {
     render() {
         return (
-            <div className="container">
+            <div className="view container">
                 <div className="row"> {HomeCardItems.map((cardItem, index) => {
                     return (
                         <div className="col" key={index}>
