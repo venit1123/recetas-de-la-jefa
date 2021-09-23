@@ -20,26 +20,24 @@ class Navbar extends Component{
 
     render(){ // always need a render. check what render is
         return (
-            <nav className="NavbarItems">
-                <h1 className="navbar-logo">Recetas de la Jefa
-                    {/* <i className="fas fa-home"></i> TODO: Delete if icon will not be used*/} 
-                </h1>
+            <nav className="NavbarItems sticky-top navbar navbar-light bg-light">
+                <h1 className="navbar-logo">Recetas de la Jefa</h1>
                 <div onClick={this.handleClick}>
                     <i className={this.state.clicked ? "menu-icon close-button" : "menu-icon "}>{this.state.clicked ? "Close" : "..."}</i>
                 </div>
-                
+
                 <ul className={this.state.clicked ? 'nav-menu active' : 'nav-menu'}>
                     {MenuItems.map((item, index)=>{
                         return(
-                            <li key={index}>
+                            <li className="nav-item" key={index}>
                                 <a className={item.cName} href={item.url}>
                                     {item.title}
                                 </a>
                             </li>
                         )
                     })} 
+                    <Button>Login</Button>
                 </ul>
-                <Button>Login</Button>
             </nav>
         ) 
     }
