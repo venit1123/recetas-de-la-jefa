@@ -1,3 +1,3 @@
-# Recetasd de la Jefa
+# Recetas de la Jefa
 Itzel Ventura Munoz
 
