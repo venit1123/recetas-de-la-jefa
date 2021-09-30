@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import { HomeCardItems } from "./Card/HomeCardItems"
-import Card from './Card/Card'
+import { HomeCardItems } from "../components/Card/HomeCardItems"
+import Card from '../components/Card/Card'
 
-class HomeView extends Component {
+class Home extends Component {
     render() {
         return (
             <div className="view container">
@@ -23,4 +23,4 @@ class HomeView extends Component {
     }
 }
 
-export default HomeView
+export default Home
