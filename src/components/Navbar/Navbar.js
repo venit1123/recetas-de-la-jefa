@@ -1,8 +1,16 @@
 import React, {Component} from 'react';
 import { Button } from '../Button';
 import { MenuItems } from "./MenuItems"
-import './Navbar.css'
+import Home from '../../pages/Home';
+import NewReceta from '../../pages/NewReceta';
+import Receta from '../../pages/Recetas'
+import {
+    BrowserRouter as Router,
+    Switch,
+    Route,
+    Link } from "react-router-dom"
 
+import './Navbar.css'
 
 // Search why one should create a class (because we are utilizing state)
 class Navbar extends Component{
@@ -20,25 +28,39 @@ class Navbar extends Component{
 
     render(){ // always need a render. check what render is
         return (
-            <nav className="NavbarItems sticky-top navbar navbar-light bg-light">
-                <h1 className="navbar-logo">Recetas de la Jefa</h1>
-                <div onClick={this.handleClick}>
-                    <i className={this.state.clicked ? "menu-icon close-button" : "menu-icon "}>{this.state.clicked ? "Close" : "..."}</i>
+            <Router>
+                <div>
+                    <nav className="NavbarItems sticky-top navbar navbar-light bg-light">
+                        <h1 className="navbar-logo">Recetas de la Jefa</h1>
+                        <div onClick={this.handleClick}>
+                            <i className={this.state.clicked ? "menu-icon close-button" : "menu-icon "}>{this.state.clicked ? "Close" : "..."}</i>
+                        </div>
+
+                        <ul className={this.state.clicked ? 'nav-menu active' : 'nav-menu'}>
+                            {MenuItems.map((item, index) => {
+                                return (
+                                    <li className="nav-item" key={index}>
+                                        <Link className={item.cName} to={item.to}>{item.title}</Link>
+                                    </li>
+                                )
+                            })}
+                            <Button>Login</Button>
+                        </ul>
+                    </nav>
+                    <Switch>
+                        <Route path="/" exact>
+                            <Home />
+                        </Route>
+                        <Route path="/new-receta">
+                            <NewReceta />
+                        </Route>
+                        <Route path="/recetas">
+                            <Receta />
+                        </Route>
+                    </Switch>
                 </div>
 
-                <ul className={this.state.clicked ? 'nav-menu active' : 'nav-menu'}>
-                    {MenuItems.map((item, index)=>{
-                        return(
-                            <li className="nav-item" key={index}>
-                                <a className={item.cName} href={item.url}>
-                                    {item.title}
-                                </a>
-                            </li>
-                        )
-                    })} 
-                    <Button>Login</Button>
-                </ul>
-            </nav>
+            </Router>
         ) 
     }
 }
