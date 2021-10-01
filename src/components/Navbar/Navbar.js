@@ -1,9 +1,6 @@
 import React, {Component} from 'react';
 import { Button } from '../Button';
 import { MenuItems } from "./MenuItems"
-import Home from '../../pages/Home';
-import NewReceta from '../../pages/NewReceta';
-import Receta from '../../pages/Recetas'
 import {
     BrowserRouter as Router,
     Switch,
@@ -11,6 +8,9 @@ import {
     Link } from "react-router-dom"
 
 import './Navbar.css'
+import Home from '../../pages/Home';
+import NewReceta from '../../pages/NewReceta';
+import Recetas from '../../pages/Recetas'
 
 // Search why one should create a class (because we are utilizing state)
 class Navbar extends Component{
@@ -37,10 +37,10 @@ class Navbar extends Component{
                         </div>
 
                         <ul className={this.state.clicked ? 'nav-menu active' : 'nav-menu'}>
-                            {MenuItems.map((item, index) => {
+                            {MenuItems.map((menuItem, index) => {
                                 return (
                                     <li className="nav-item" key={index}>
-                                        <Link className={item.cName} to={item.to}>{item.title}</Link>
+                                        <Link className={menuItem.cName} to={menuItem.to} >{menuItem.title} </Link>
                                     </li>
                                 )
                             })}
@@ -55,7 +55,7 @@ class Navbar extends Component{
                             <NewReceta />
                         </Route>
                         <Route path="/recetas">
-                            <Receta />
+                            <Recetas />
                         </Route>
                     </Switch>
                 </div>
