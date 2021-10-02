@@ -1,26 +1,25 @@
 import React, { Component } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Home from '../../pages/Home';
-import NewReceta from '../../pages/NewReceta';
+import Food from '../../pages/Food';
+import Family from '../../pages/Family';
 import Recetas from '../../pages/Recetas'
-import history from './History';
+import NewReceta from '../../pages/NewReceta'
 
-export default class Routes extends Component {
+class Routes extends Component {
     render() {
         return (
-            <Router history={history}>
+            <Router>
                 <Switch>
-                    <Route path="/" exact >
-                        <Home />
-                    </Route>
-                    <Route path="/new-receta">
-                        <NewReceta />
-                    </Route>
-                    <Route path="/recetas" >
-                        <Recetas />
-                    </Route>
+                    <Route exact path="/" component={Home}/>
+                    <Route exact path="/food" component={Food} />
+                    <Route exact path="/family" component={Family} />
+                    <Route exact path="/food/new-receta" component={NewReceta} />
+                    <Route exact path="/food/recetas" component={Recetas} />
                 </Switch>
             </Router>
         )
     }
 }
+
+export default Routes

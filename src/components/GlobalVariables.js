@@ -4,10 +4,14 @@
 export const GlobalVariables = {
     // ALL PATHS
     'HOME_PATH': '/',
-    'NEW_RECETA_PATH':  '/new-receta',
-    'RECETAS_PATH': '/recetas',
+
+    'FAMILY_PATH': '/family',
+    
+    "FOOD_PATH": '/food',
+    'NEW_RECETAS_PATH': '/food/new-receta',
+    'RECETAS_PATH': '/food/recetas',
 
     // WEB APP
-    'APP_TITLE': 'Recetas de la Jefa',
+    'APP_TITLE': 'Consejos de la Jefa',
 
 }
