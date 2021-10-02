@@ -4,17 +4,17 @@ export const MenuItems = [
     {
         title: 'Home',
         path: GlobalVariables.HOME_PATH,
-        cName: 'nav-links'
+        cName: 'nav-links',
     },
     {
-        title: 'Add New Recetas',
-        path: GlobalVariables.NEW_RECETA_PATH,
-        cName: 'nav-links'
+        title: 'Food',
+        path: GlobalVariables.FOOD_PATH,
+        cName: 'nav-links',
     },
     {
-        title: 'Recetas',
-        path: GlobalVariables.RECETAS_PATH,
-        cName: 'nav-links'
+        title: 'Family',
+        path: GlobalVariables.FAMILY_PATH,
+        cName: 'nav-links',
     },
     
     /* TODO: Come back to add Login in the 
@@ -24,5 +24,5 @@ export const MenuItems = [
        path: GlobalVariables.RECETAS_PATH,
        cName: 'nav-links-mobile'
     }*/
-    
+
 ]

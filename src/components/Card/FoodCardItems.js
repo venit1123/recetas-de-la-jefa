@@ -1,12 +1,12 @@
 import { GlobalVariables } from '../GlobalVariables'
 
-export const HomeCardItems = [
+export const FoodCardItems = [
     {
         title: "Create New Receta",
         url: "https://cdn.cheapism.com/images/Budget_Friendly_Mexican_Dishes.2e16d0ba.fill-1440x605.jpg",
         alt: "Mexican Dishes",
         desc: "Add a new Jefa's favorite recipe.",
-        path: GlobalVariables.NEW_RECETA_PATH
+        path: GlobalVariables.NEW_RECETAS_PATH
     },
     {
         title: "View all Jefecita's Recipes",

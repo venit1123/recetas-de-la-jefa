@@ -4,8 +4,10 @@ import { MenuItems } from "./MenuItems"
 import { BrowserRouter as Router, NavLink, Switch, Route } from "react-router-dom"
 import { GlobalVariables } from '../GlobalVariables'
 import Home from '../../pages/Home';
-import NewReceta from '../../pages/NewReceta';
+import Food from '../../pages/Food';
+import Family from '../../pages/Family';
 import Recetas from '../../pages/Recetas'
+import NewReceta from '../../pages/NewReceta'
 import './Navbar.css'
 
 
@@ -34,6 +36,7 @@ class Navbar extends Component {
                         </div>
                         <ul className={this.state.clicked ? 'nav-menu active' : 'nav-menu'}>
                             {MenuItems.map((menuItem, index) => {
+
                                 return (
                                     <div>
                                         <NavLink 
@@ -60,9 +63,11 @@ class Navbar extends Component {
                         </ul>
                     </nav>
                     <Switch>
-                        <Route path="/" exact component={Home}/>
-                        <Route path="/new-receta" exact component={NewReceta}/>
-                        <Route path="/recetas" exact component={Recetas}/>
+                        <Route exact path="/" component={Home}/>
+                        <Route exact path="/family" component={Family}/>
+                        <Route exact path="/food/new-receta" component={NewReceta} />
+                        <Route exact path="/food/recetas" component={Recetas} />
+                        <Route exact path="/food" component={Food} />
                     </Switch>
                     </div>
                 </Router>
