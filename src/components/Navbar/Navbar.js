@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Button } from '../Button';
 import { MenuItems } from "./MenuItems"
-import { BrowserRouter as Router, Link, Switch, Route } from "react-router-dom"
+import { BrowserRouter as Router, NavLink, Switch, Route } from "react-router-dom"
 import { GlobalVariables } from '../GlobalVariables'
 import Home from '../../pages/Home';
 import NewReceta from '../../pages/NewReceta';
@@ -30,20 +30,32 @@ class Navbar extends Component {
                     <nav className="NavbarItems sticky-top navbar navbar-light bg-light">
                         <h1 className="navbar-logo">{GlobalVariables.APP_TITLE}</h1>
                         <div onClick={this.handleClick}>
-                            <i className={this.state.clicked ? "menu-icon close-button" : "menu-icon "}>{this.state.clicked ? "Close" : "..."}</i>
+                            <i className={this.state.clicked ? "menu-icon close-button" : "menu-icon "}>{this.state.clicked ? "Close" : "X"}</i>
                         </div>
                         <ul className={this.state.clicked ? 'nav-menu active' : 'nav-menu'}>
                             {MenuItems.map((menuItem, index) => {
                                 return (
                                     <div>
-                                        <Link to={menuItem.path}>
+                                        <NavLink 
+                                            exact
+                                            activeClassName="selected"
+                                            to={menuItem.path}
+                                            style={{
+                                                color: "black",
+                                                textDecoration: 'none'
+                                            }}
+                                            activeStyle={{
+                                                fontWeight: "bold",
+                                                color: "#ef8354",
+                                            }}
+                                        >
                                             <div>
-                                                <li className="nav-item" key={index}> {menuItem.title} </li>
+                                                <li key={index}> {menuItem.title} </li>
                                             </div>
-                                        </Link> 
+                                        </NavLink> 
                                     </div>
                                 )
-                            })};
+                            })}
                             <Button>Login</Button>
                         </ul>
                     </nav>

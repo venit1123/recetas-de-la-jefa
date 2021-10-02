@@ -16,9 +16,13 @@ export const MenuItems = [
         path: GlobalVariables.RECETAS_PATH,
         cName: 'nav-links'
     },
-    // {
-    //     title: 'Login',
-    //     url: '#',
-    //     cName: 'nav-links-mobile'
-    // }
+    
+    /* TODO: Come back to add Login in the 
+        nav only when in mobile view
+    {
+        title: 'Login',
+       path: GlobalVariables.RECETAS_PATH,
+       cName: 'nav-links-mobile'
+    }*/
+    
 ]
