@@ -1,22 +1,24 @@
+import { GlobalVariables } from '../GlobalVariables'
+
 export const MenuItems = [
     {
         title: 'Home',
-        to: '/',
+        path: GlobalVariables.HOME_PATH,
         cName: 'nav-links'
     },
     {
         title: 'Add New Recetas',
-        to: '/new-receta',
+        path: GlobalVariables.NEW_RECETA_PATH,
         cName: 'nav-links'
     },
     {
         title: 'Recetas',
-        to: '/recetas',
+        path: GlobalVariables.RECETAS_PATH,
         cName: 'nav-links'
     },
-    {
-        title: 'Login',
-        url: '#',
-        cName: 'nav-links-mobile'
-    }
+    // {
+    //     title: 'Login',
+    //     url: '#',
+    //     cName: 'nav-links-mobile'
+    // }
 ]
