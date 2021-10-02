@@ -14,6 +14,7 @@ class Home extends Component {
                                 url={cardItem.url}
                                 alt={cardItem.alt}
                                 desc={cardItem.desc}
+                                path={cardItem.path}
                             />
                         </div>
                     )})};
