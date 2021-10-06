@@ -1,9 +1,15 @@
-import React from 'react';
+import { Component } from 'react';
+import MotherAndDaughter from "../Images/mother_and_daughter.jpg";
+import "../App.css"
 
-const Home = () => {
-    return (
-        <h1>HOME VIEW</h1>
-    )
+class Home extends Component {
+    render(){
+            return (
+                <div className="text-center">
+                    <img src={MotherAndDaughter} className="img-fluid" alt="mother and daughter, looking at each other from the back"  />
+                </div>
+            )
+        }
 }
 
 export default Home
