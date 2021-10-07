@@ -1,20 +1,21 @@
 {
   "files": {
-    "main.css": "/receta-de-la-jefa/static/css/main.e7741559.chunk.css",
-    "main.js": "/receta-de-la-jefa/static/js/main.bee247fa.chunk.js",
-    "main.js.map": "/receta-de-la-jefa/static/js/main.bee247fa.chunk.js.map",
+    "main.css": "/receta-de-la-jefa/static/css/main.8e065139.chunk.css",
+    "main.js": "/receta-de-la-jefa/static/js/main.de0f59fe.chunk.js",
+    "main.js.map": "/receta-de-la-jefa/static/js/main.de0f59fe.chunk.js.map",
     "runtime-main.js": "/receta-de-la-jefa/static/js/runtime-main.eae6b38f.js",
     "runtime-main.js.map": "/receta-de-la-jefa/static/js/runtime-main.eae6b38f.js.map",
-    "static/js/2.6155506a.chunk.js": "/receta-de-la-jefa/static/js/2.6155506a.chunk.js",
-    "static/js/2.6155506a.chunk.js.map": "/receta-de-la-jefa/static/js/2.6155506a.chunk.js.map",
+    "static/js/2.6f877793.chunk.js": "/receta-de-la-jefa/static/js/2.6f877793.chunk.js",
+    "static/js/2.6f877793.chunk.js.map": "/receta-de-la-jefa/static/js/2.6f877793.chunk.js.map",
     "index.html": "/receta-de-la-jefa/index.html",
-    "static/css/main.e7741559.chunk.css.map": "/receta-de-la-jefa/static/css/main.e7741559.chunk.css.map",
-    "static/js/2.6155506a.chunk.js.LICENSE.txt": "/receta-de-la-jefa/static/js/2.6155506a.chunk.js.LICENSE.txt"
+    "static/css/main.8e065139.chunk.css.map": "/receta-de-la-jefa/static/css/main.8e065139.chunk.css.map",
+    "static/js/2.6f877793.chunk.js.LICENSE.txt": "/receta-de-la-jefa/static/js/2.6f877793.chunk.js.LICENSE.txt",
+    "static/media/mother_and_daughter.5ac20811.jpg": "/receta-de-la-jefa/static/media/mother_and_daughter.5ac20811.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.eae6b38f.js",
-    "static/js/2.6155506a.chunk.js",
-    "static/css/main.e7741559.chunk.css",
-    "static/js/main.bee247fa.chunk.js"
+    "static/js/2.6f877793.chunk.js",
+    "static/css/main.8e065139.chunk.css",
+    "static/js/main.de0f59fe.chunk.js"
   ]
 }
