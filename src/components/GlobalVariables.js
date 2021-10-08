@@ -3,7 +3,7 @@
 */
 export const GlobalVariables = {
     // ALL PATHS
-    'HOME_PATH': '/',
+    'HOME_PATH': '/recetas-de-la-jefa',
 
     'FAMILY_PATH': '/family',
     
