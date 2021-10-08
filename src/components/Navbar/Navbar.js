@@ -30,9 +30,12 @@ class Navbar extends Component {
             <Router>
                 <div>
                     <nav className="NavbarItems sticky-top navbar navbar-light bg-light">
-                        <h1 className="navbar-logo">{GlobalVariables.APP_TITLE}</h1>
-                        <div onClick={this.handleClick}>
-                            <i className={this.state.clicked ? "menu-icon close-button" : "menu-icon "}>{this.state.clicked ? "Close" : "X"}</i>
+                        <div>
+                            <h1 className="navbar-logo">{GlobalVariables.APP_TITLE}</h1>
+                        </div>
+
+                        <div className="nav-mobile"onClick={this.handleClick}>
+                            <i className={this.state.clicked ? "far fa-times-circle" : "fas fa-bars"}/>
                         </div>
                         <ul className={this.state.clicked ? 'nav-menu active' : 'nav-menu'}>
                             {MenuItems.map((menuItem, index) => {
@@ -40,6 +43,7 @@ class Navbar extends Component {
                                 return (
                                     <div>
                                         <NavLink 
+                                            onClick={this.handleClick}
                                             exact
                                             activeClassName="selected"
                                             to={menuItem.path}
@@ -59,11 +63,11 @@ class Navbar extends Component {
                                     </div>
                                 )
                             })}
-                            <Button>Login</Button>
+                            {/* TODO: Add button later <Button>Login</Button> */}
                         </ul>
                     </nav>
                     <Switch>
-                        <Route exact path="/" component={Home}/>
+                        <Route exact path="/recetas-de-la-jefa" component={Home}/>
                         <Route exact path="/family" component={Family}/>
                         <Route exact path="/food/new-receta" component={NewReceta} />
                         <Route exact path="/food/recetas" component={Recetas} />

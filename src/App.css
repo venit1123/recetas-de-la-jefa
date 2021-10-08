@@ -9,3 +9,25 @@
 .view {
    margin-top: 2rem;
 }
+.lg-image {
+  border-radius: 20px;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.lg-paragraph {
+  text-align: left;
+  font-family: 'Nunito Sans', sans-serif;
+}
+
+@media screen and (max-width: 960px){
+  .mobile-card {
+    margin: 10px;
+    padding: 2%;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  }
+
+  .card-paragraph{
+    margin-top:  .5rem;
+  }
+}
