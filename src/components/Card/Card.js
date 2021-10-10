@@ -12,9 +12,9 @@ function Card(props) {
                 textDecoration: 'none'
             }}
         >
-            <div className="card">
+            <div className="card rg-card">
                 <div className="card-title">{props.title}</div>
-                <img src={props.url} className="card-img-top" alt={props.alt} />
+                <img src={props.url} className="card-img" alt={props.alt} />
                 <div className="card-body">
                     <p className="card-text">{props.desc}</p>
                 </div>
