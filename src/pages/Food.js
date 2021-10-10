@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { FoodCardItems } from "../components/Card/FoodCardItems"
 import Card from '../components/Card/Card'
+import '../components/Card/Card.css'
 
 class Food extends Component {
     render() {
@@ -8,7 +9,7 @@ class Food extends Component {
             <div className="view container">
                 <div className="row"> {FoodCardItems.map((cardItem, index) => {
                     return (
-                        <div className="col" key={index}>
+                        <div className="col card-col" key={index}>
                             <Card
                                 title={cardItem.title}
                                 url={cardItem.url}
